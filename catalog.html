@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="page-logo header-logo" href="index.html" title="Главная страница Техномарт">
+      <a class="page-logo header-logo" href="index.html" title="Главная страница Техномарт" aria-label="Главная страница техномарт">
         <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарт">
       </a>
       <input class="header-search" type="text" placeholder="Поиск: ">
@@ -20,7 +20,7 @@
           строительных материалов
           и инструментов для ремонта
       </p>
-      <a class="header-phonenumber" href="tel:+78125550555">+7 (812) 555-05-55</a>
+      <a class="header-phonenumber" href="tel:+78125550555" aria-label="Телефон горячей линии">+7 (812) 555-05-55</a>
       <p class="header-address">
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
       </p>
@@ -51,66 +51,67 @@
 
       <aside>
         <h3>Фильтр:</h3>
-        <section>
-          <h4>Цена:</h4>
-          <!-- Ползунок -->
-          <input type="text" value="0">
-          <span>-</span>
-          <input type="text" value="30000">
-        </section>
-        <section>
-          <h4>Производители:</h4>
-          <ul>
-            <li>
-              <input type="checkbox" id="">
-              <label for=""><span>Bosch</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="">
-              <label for=""><span>Интерскол</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="">
-              <label for=""><span>Makita</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="">
-              <label for=""><span>Dewolt</span></label>
-            </li>
-            <li>
-              <input type="checkbox" id="">
-              <label for=""><span>Hitachi</span></label>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Питание:</h4>
-          <ul>
+        <form method="post" action="https://echo.htmlacademy.ru">
+          <section>
+            <h4>Цена:</h4>
+            <!-- Ползунок -->
+            <input type="text" value="0">
+            <span>-</span>
+            <input type="text" value="30000">
+          </section>
+          <section>
+            <h4>Производители:</h4>
+            <ul>
               <li>
-                <input type="checkbox" id="">
-                <label for=""><span>Аккумуляторные</span></label>
+                <input id="" type="checkbox" name="bosch">
+                <label for=""><span>Bosch</span></label>
               </li>
               <li>
-                <input type="checkbox" id="">
-                <label for=""><span>Сетевые</span></label>
+                <input id="" type="checkbox" name="interskol">
+                <label for=""><span>Интерскол</span></label>
+              </li>
+              <li>
+                <input id="" type="checkbox" name="makita">
+                <label for=""><span>Makita</span></label>
+              </li>
+              <li>
+                <input id="" type="checkbox" name="dewolt">
+                <label for=""><span>Dewolt</span></label>
+              </li>
+              <li>
+                <input id="" type="checkbox" name="hitachi">
+                <label for=""><span>Hitachi</span></label>
               </li>
             </ul>
-        </section>
-        <button type="submit">Показать</button>
+          </section>
+          <section>
+            <h4>Питание:</h4>
+            <ul>
+                <li>
+                  <input id="" type="checkbox" name="battery">
+                  <label for=""><span>Аккумуляторные</span></label>
+                </li>
+                <li>
+                  <input id="" type="checkbox" name="network">
+                  <label for=""><span>Сетевые</span></label>
+                </li>
+              </ul>
+          </section>
+          <button type="submit">Показать</button>
+        </form>
       </aside>
 
       <section>
         <header>
           <h4>Сортировка:</h4>
           <ul>
-            <li><button type="button">По цене</button></li>
-            <li><button type="button">По типу</button></li>
-            <li><button type="button">По функционалу</button></li>
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По функционалу</a></li>
           </ul>
           <ul>
-            <li><button type="button"></button></li>
-            <li><button type="button"></button></li>
-            <li><button type="button"></button></li>
+            <li><a href="#" aria-label="По возрастанию"></a></li>
+            <li><a href="#" aria-label="По убыванию"></a></li>
           </ul>
         </header>
         <ul class="main-popular-cards">
@@ -183,12 +184,12 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-logo footer-logo" href="index.html">
+      <a class="page-logo footer-logo" href="index.html"  title="Главная страница Техномарт" aria-label="Главная страница техномарт">
         <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип Техномарт">
       </a>
       <p class="footer-address">
         <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <a class="footer-phonenumber" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        <a class="footer-phonenumber" href="tel:+78125550555" aria-label="Телефон горячей линии">+7 (812) 555-05-55</a>
       </p>
       <nav class="footer-nav">
         <ul>
@@ -208,9 +209,9 @@
         Все права защищены
       </p>
       <ul class="social">
-        <li><a class="social-item social-vk" href="#"></a></li>
-        <li><a class="social-item social-fb" href="#"></a></li>
-        <li><a class="social-item social-insta" href="#"></a></li>
+        <li><a class="social-item social-vk" href="#" aria-label="Техномарт во вконтакте"></a></li>
+        <li><a class="social-item social-fb" href="#" aria-label="Техномарт в facebook"></a></li>
+        <li><a class="social-item social-insta" href="#" aria-label="Техномарт в instagram"></a></li>
       </ul>
       <p class="footer-feedback">
         Обратная связь:
@@ -221,5 +222,11 @@
         <a class="developers-page footer-yellow" href="htmlacademy.ru">htmlacademy.ru</a>
       </p>
     </footer>
+    <section><!--поп-ап-->
+      <p>Товар добавлен в корзину!</p>
+      <a href="#">Оформить заказ</a>
+      <button type="button">Продолжить покупки</button>
+      <button type="button" aria-label="Закрыть окно"></button>
+    </section>
   </body>
 </html>
