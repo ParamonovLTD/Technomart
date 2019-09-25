@@ -11,38 +11,47 @@
   <body>
     <header class="header">
       <div class="dark-bg">
-        <a class="logo header__logo header__logo--hover header__logo--active" href="index.html" title="Главная страница Техномарт" aria-label="Главная страница техномарт">
-          <img class="logo__image" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарт">
-        </a>
-        <input class="header__search header__search--hover header__search--focus" type="text" placeholder="Поиск: ">
-        <a class="header__link header__link--hover header__link--active" href="#">Закладки: 0</a>
-        <a class="header__link header__link--hover header__link--active" href="#">Корзина: 0</a>
-        <a class="header__order header__order--hover header__order--active" href="#">Оформить заказ</a>
+        <div class="container">
+          <a class="logo header__logo" href="index.html" title="Главная страница Техномарт" aria-label="Главная страница техномарт">
+            <img class="logo__image" src="img/logo-technomart.svg" width="109" height="19" alt="Логотип Техномарт">
+          </a>
+          <input class="header__search" type="text" placeholder="Поиск: ">
+          <a class="header__link" href="#">Закладки: 0</a>
+          <a class="header__link" href="#">Корзина: 0</a>
+          <a class="header__order" href="#">Оформить заказ</a>
+        </div>
       </div>
-      <p class="header__text">Интернет-магазин
-        строительных материалов
-        и инструментов для ремонта
-      </p>
-      <a class="header__phonenumber" href="tel:+78125550555" aria-label="Телефон горячей линии">+7 (812) 555-05-55</a>
-      <p>
-          <address class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-      </p>
-      <ul class="header-login">
-        <li><a class="header__btn header__btn--hover header__btn--active" href="#">Войти</a></li>
-        <li><a class="header__btn header__btn--hover header__btn--active" href="#">Регистрация</a></li>
-      </ul>
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Главная</a></li>
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Компания</a></li>
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Каталог</a></li>
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Новости</a></li>
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Спецпредложения</a></li>
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Доставка</a></li>
-          <li><a class="nav__item nav__item--hover nav__item--active" href="#">Контакты</a></li>
+      <div class="container">
+        <p class="header__text">Интернет-магазин
+          строительных материалов
+          и инструментов для ремонта
+        </p>
+        <a class="header__phonenumber" href="tel:+78125550555" aria-label="Телефон горячей линии">+7 (812) 555-05-55</a>
+        <p>
+            <address class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        </p>
+        <ul class="header-login">
+          <li><a class="header__btn" href="#">Войти</a></li>
+          <li><a class="header__btn" href="#">Регистрация</a></li>
         </ul>
-      </nav>
+      </div>
+      <div class="lightdark-bg">
+        <div class="container">
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li><a class="nav__item" href="#">Главная</a></li>
+              <li><a class="nav__item" href="#">Компания</a></li>
+              <li><a class="nav__item" href="#">Каталог</a></li>
+              <li><a class="nav__item" href="#">Новости</a></li>
+              <li><a class="nav__item" href="#">Спецпредложения</a></li>
+              <li><a class="nav__item" href="#">Доставка</a></li>
+              <li><a class="nav__item" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
+
     <main>
       <ul class="way">
         <li><a class="way__item" href="#">Каталог</a></li>
@@ -50,16 +59,15 @@
         <li><a class="way__item" href="#">Перфораторы</a></li>
       </ul>
       <h1 class="section-title catalog-title">Перфораторы</h1>
-
       <aside>
-        <h3>Фильтр:</h3>
+        <h3 class="subtitle">Фильтр:</h3> <!--Не знаю как назвать класс-->
         <form class="filters" method="post" action="https://echo.htmlacademy.ru">
           <section class="filters__item">
             <h4 class="filters__title">Цена:</h4>
             <!-- Ползунок -->
-            <input type="text" value="0">
-            <span>-</span>
-            <input type="text" value="30000">
+            <input class="filters__price" type="text" value="0">
+            -
+            <input class="filters__price" type="text" value="30000">
           </section>
           <section class="filters__item">
             <h4 class="filters__title">Производители:</h4>
@@ -104,16 +112,16 @@
       </aside>
 
       <section>
-        <header>
-          <h4>Сортировка:</h4>
-          <ul>
-            <li><a href="#">По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a href="#">По функционалу</a></li>
+        <header class="sort">
+          <h4 class="subtitle">Сортировка:</h4>
+          <ul class="sort__list">
+            <li class="sort__item"><a class="sort__value" href="#">По цене</a></li>
+            <li class="sort__item"><a class="sort__value" href="#">По типу</a></li>
+            <li class="sort__item"><a class="sort__value" href="#">По функционалу</a></li>
           </ul>
-          <ul>
-            <li><a href="#" aria-label="По возрастанию"></a></li>
-            <li><a href="#" aria-label="По убыванию"></a></li>
+          <ul class="sort__list">
+            <li class="sort__item"><a class="sort__direction" href="#" aria-label="По возрастанию"></a></li>
+            <li class="sort__item"><a class="sort__direction" href="#" aria-label="По убыванию"></a></li>
           </ul>
         </header>
         <ul class="cards">
@@ -169,63 +177,71 @@
             <p class="card__cost">12500 Р.</p>
           </li>
         </ul>
-        <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
+        <ul class="pager">
+          <li class="pager__item"><a class="pager__link pager__link--active" href="#">1</a></li>
+          <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+          <li class="pager__item"><a class="pager__link" href="#">3</a></li>
+          <li class="pager__item"><a class="pager__link" href="#">Следующая</a></li>
         </ul>
       </section>
 
-      <section>
-        <h2>Пара слов о перфораторах</h2>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
-          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-        </p>
+      <section class="description">
+        <div class="container">
+          <h2 class="section-title description__title">Пара слов о перфораторах</h2>
+          <p class="description__text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
       </section>
     </main>
-    <footer class="page-footer">
-      <a class="logo footer-logo" href="index.html" title="Главная страница Техномарт" aria-label="Главная страница техномарт">
-        <img class="logo-image" src="img/logo-technomart.svg" width="138" height="23" alt="Логотип Техномарт">
-      </a>
-      <p>
-        <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        <a class="footer-phonenumber" href="tel:+78125550555"  aria-label="Телефон горячей линии">+7 (812) 555-05-55</a>
-      </p>
-      <nav class="footer-nav nav">
-        <ul class="nav__list">
-          <li><a class="footer-nav-item" href="#">Компания</a></li>
-          <li><a class="footer-nav-item" href="#">Новости</a></li>
-          <li><a class="footer-nav-item" href="#">Каталог</a></li>
-          <li><a class="footer-nav-item" href="#">Доставка</a></li>
-          <li><a class="footer-nav-item" href="#">Контакты</a></li>
-          <li><a class="footer-nav-item footer-yellow" href="#">Материалы</a></li>
-          <li><a class="footer-nav-item footer-yellow" href="#">Техника</a></li>
-          <li><a class="footer-nav-item footer-yellow" href="#">Инструмент</a></li>
-          <li><a class="footer-nav-item footer-yellow" href="#">Спецпредложения</a></li>
-        </ul>
-      </nav>
+
+    <footer class="footer">
+      <div class="container">
+        <a class="logo footer__logo" href="index.html" title="Главная страница Техномарт" aria-label="Главная страница техномарт">
+          <img class="logo__image" src="img/logo-technomart.svg" width="138" height="23" alt="Логотип Техномарт">
+        </a>
+        <p>
+          <address class="footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="footer__phonenumber" href="tel:+78125550555"  aria-label="Телефон горячей линии">+7 (812) 555-05-55</a>
+        </p>
+        <nav class="footer__nav nav">
+          <ul class="nav__list footer-nav">
+            <li><a class="footer-nav__item" href="#">Компания</a></li>
+            <li><a class="footer-nav__item" href="#">Новости</a></li>
+            <li><a class="footer-nav__item" href="#">Каталог</a></li>
+            <li><a class="footer-nav__item" href="#">Доставка</a></li>
+            <li><a class="footer-nav__item" href="#">Контакты</a></li>
+            <li><a class="footer-nav__item footer-nav__item--yellow" href="#">Материалы</a></li>
+            <li><a class="footer-nav__item footer-nav__item--yellow" href="#">Техника</a></li>
+            <li><a class="footer-nav__item footer-nav__item--yellow" href="#">Инструмент</a></li>
+            <li><a class="footer-nav__item footer-nav__item--yellow" href="#">Спецпредложения</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="dark-bg">
-        <p class="footer-copyright">
-          © 2010–2019 Компания «Техномарт»
-          Все права защищены
-        </p>
-        <ul class="social">
-          <li><a class="social-item social-vk" href="#" aria-label="Техномарт во вконтакте"></a></li>
-          <li><a class="social-item social-fb" href="#" aria-label="Техномарт в facebook"></a></li>
-          <li><a class="social-item social-insta" href="#" aria-label="Техномарт в instagram"></a></li>
-        </ul>
-        <p class="footer-feedback">
-          Обратная связь:
-          <a class="feedback" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="developers">
-          Разработано —
-          <a class="developers-page" href="https://htmlacademy.ru">htmlacademy.ru</a>
-        </p>
+        <div class="container">
+          <p class="footer__copyright">
+            © 2010–2019 Компания «Техномарт»
+            Все права защищены
+          </p>
+          <ul class="footer__social social">
+            <li><a class="social__item social__vk" href="#" aria-label="Техномарт во вконтакте"></a></li>
+            <li><a class="social__item social__fb" href="#" aria-label="Техномарт в facebook"></a></li>
+            <li><a class="social__item social__insta" href="#" aria-label="Техномарт в instagram"></a></li>
+          </ul>
+          <p class="footer__text">
+            Обратная связь:
+            <a class="footer__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer__text">
+            Разработано —
+            <a class="footer__link" href="https://htmlacademy.ru">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </footer>
+
     <section><!--поп-ап-->
       <h3>Товар добавлен в корзину!</h3>
       <a href="#">Оформить заказ</a>
