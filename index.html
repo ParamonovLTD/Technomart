@@ -78,16 +78,13 @@
           <h3 class="features__title">Доставка</h3>
           <a class="features__link" href="#" aria-label="Посмотреть информацию о доставке">Бесплатно</a>
         </div>
-        <ul class="slider">
+        <ul class="features__slider slider">
           <li class="slider__item">
             <img  class="slider__image" src="img/slider-first.jpg" width="620" height="266" alt="Мужчина сверлит отверстие в кирпичной стене">
             <header class="slider__header">
               <p class="slider__title">Дрели</p>
               <p class="slider__slogan">Соседям на радость!</p>
             </header>
-            <a class="btn slider__link" href="#">Открыть каталог</a>
-            <input class="slider__check" type="radio">
-            <input class="slider__check" type="radio">
           </li>
           <li class="slider__item">
             <img  class="slider__image" src="img/slider-second.jpg" width="620" height="266" alt="Мужчина сверлит отверстие в кирпичной стене">
@@ -95,10 +92,10 @@
               <p class="slider__title">Перфораторы</p>
               <p class="slider__slogan">Настоящие мужские игрушки</p>
             </header>
-            <a class="btn slider__link" href="#">Открыть каталог</a>
-            <input class="slider__check" type="radio">
-            <input class="slider__check" type="radio">
           </li>
+          <a class="btn slider__link" href="#">Открыть каталог</a>
+          <input class="slider__check" type="radio">
+          <input class="slider__check" type="radio">
         </ul>
       </section>
 
@@ -176,7 +173,7 @@
             </a>
           </li>
           <li class="companies__item">
-            <a class="to-partners-company" href="#" aria-label="Сайт магазина metabo">
+            <a class="companies__link" href="#" aria-label="Сайт магазина metabo">
               <img class="companies__image" src="img/metabo.png" width="204" height="69" alt="Metabo">
             </a>
           </li>
@@ -190,41 +187,43 @@
             Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <ul class="services__list">
-            <li><button class="services__btn" type="button">Доставка</button></li>
+          <ul class="services__buttons">
+            <li><button class="services__btn services__btn--active" type="button">Доставка</button></li>
             <li><button class="services__btn" type="button">Гарантия</button></li>
             <li><button class="services__btn" type="button">Кредит</button></li>
           </ul>
-          <section class="services-item">
-            <h3 class="services-item-title">Доставка</h3>
-            <p class="services-item-slogan">
-              Мы с удовольствием доставим ваш товар прямо
-              к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,
-              поднимая его на ваш этаж!
-            </p>
-            <img class="services-item-picture" src="img/services-delivery.png" width="468" height="261" alt="синий грузовик">
-          </section>
-          <section class="services-item">
-            <h3 class="services-item-title">Гарантия</h3>
-            <p class="services-item-slogan">
-              Если купленный у нас товар поломается или заискрит,
-              а также в случае пожара, спровоцированного его возгоранием,
-              вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-              сгоревший товар на новый.
-              Дом уж восстановите как-нибудь сами.
-            </p>
-            <img class="services-item-picture" src="img/services-guarantee.png" width="389" height="283" alt="синий грузовик">
-          </section>
-          <section class="services-item">
-            <h3 class="services-item-title">Кредит</h3>
-            <p class="services-item-slogan">
-            Залезть в долговую яму стало проще!
-            Кредитные консультанты придут вам на помощь.
-            </p>
-            <a href="#">Отправить заявку</a>
-            <img class="services-item-picture" src="img/services-credit.png" width="465" height="285" alt="синий грузовик">
-          </section>
+          <ul class="services__carousel carousel">
+            <li class="carousel__item">
+              <h3 class="carousel__title">Доставка</h3>
+              <p class="carousel__slogan">
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж!
+              </p>
+              <img class="carousel__image carousel__car" src="img/services-delivery.png" width="468" height="261" alt="синий грузовик">
+            </li>
+            <li class="carousel__item">
+              <h3 class="carousel__title">Гарантия</h3>
+              <p class="carousel__slogan">
+                Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгоранием,
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+                сгоревший товар на новый.
+                Дом уж восстановите как-нибудь сами.
+              </p>
+              <img class="carousel__image carousel__medal" src="img/services-guarantee.png" width="389" height="283" alt="синий грузовик">
+            </li>
+            <li class="carousel__item">
+              <h3 class="carousel__title">Кредит</h3>
+              <p class="carousel__slogan">
+              Залезть в долговую яму стало проще!
+              Кредитные консультанты придут вам на помощь.
+              </p>
+              <a href="#">Отправить заявку</a>
+              <img class="carousel__image carousel__paper" src="img/services-credit.png" width="465" height="285" alt="синий грузовик">
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -253,7 +252,7 @@
           заехав в наш офис:
         </p>
         <button class="contacts__map" aria-label="Адрес офиса компании">
-          <img src="img/map.png" width="300" height="158" alt="Адрес офиса компании">
+          <img class="contacts__image" src="img/map.png" width="300" height="158" alt="Адрес офиса компании">
         </button>
         <a class="btn contacts__btn" href="#">Заблудились? Напишите нам!</a>
       </section>

@@ -195,6 +195,15 @@ a {
   opacity: 0.3;
 }
 
+.features__slider {
+  list-style: none;
+}
+
+.slider__image {
+  width: 620px;
+  height: 266px;
+}
+
 .slider__title {
   font-weight: 700;
   font-size: 36px;
@@ -223,6 +232,11 @@ a {
 
 .card {
   border: 1px solid #e5e5e5;
+}
+
+.card__image {
+  width: 218px;
+  height: 170px;
 }
 
 .card__title {
@@ -260,6 +274,86 @@ a {
 
 .services {
   background-color: #f4f7f9;
+}
+
+.services__title {
+  color: #000000;
+}
+
+.cervices__slogan {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'PTSans', Arial, sans-serif;
+}
+
+.services__buttons {
+  list-style: none;
+}
+
+.services__btn {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+
+  color: #ffffff;
+
+  background-color: #32425c;
+  border: none;
+}
+
+.services__btn--active {
+  color: #32425c;
+
+  background-color: #ffffff;
+}
+
+.services__carousel {
+  list-style: none;
+}
+
+.carousel__title {
+  font-size: 36px;
+  line-height: 36px;
+
+  color: #32425c;
+}
+
+.carousel__slogan {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'PTSans', Arial, sans-serif;
+}
+
+/* Какой из 2-ух способов будет предпочтительнее? */
+
+/* .carousel__car {
+  width: 468px;
+  height: 261px;
+}
+
+.carousel__medal {
+  width: 389px;
+  height: 283px;
+}
+
+.carousel__paper {
+  width: 465px;
+  height: 285px;
+} */
+
+.carousel__item:nth-child(1) > .carousel__image {
+  width: 468px;
+  height: 261px;
+}
+
+.carousel__item:nth-child(2) > .carousel__image {
+  width: 389px;
+  height: 283px;
+}
+
+.carousel__item:nth-child(3) > .carousel__image {
+  width: 465px;
+  height: 285px;
 }
 
 /* company */
@@ -305,6 +399,11 @@ a {
   font-size: 13px;
   line-height: 24px;
   font-family: 'PTSans', Arial, sans-serif;
+}
+
+.contacts__image {
+  width: 300px;
+  height: 158px;
 }
 
 /* footer */
