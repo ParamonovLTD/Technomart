@@ -33,13 +33,36 @@ if (popupMap !== null) {
 var linkForm = document.querySelector('.contacts__btn');
 
 var popupForm = document.querySelector('.popup-form');
+
+var form = document.querySelector('.popup__form');
+
+if (popupForm !== null) {
+  var login = popupForm.querySelector('[name=name]');
+  var mail = popupForm.querySelector('[name=e-mail]');
+}
+
+var isStorageSupport = true;
+var storage = '';
 // var closeForm = popupForm.querySelector('.popup-close');
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 if (linkForm !== null) {
   linkForm.addEventListener('click', function (evt) {
     evt.preventDefault();
     popupForm.classList.add('popup-show');
   });
+
+  if (storage) {
+    login.value = storage;
+    mail.focus();
+  } else {
+    login.focus();
+  }
 };
 
 if (popupForm !== null) {
@@ -47,6 +70,22 @@ if (popupForm !== null) {
   close.addEventListener('click', function (evt) {
     evt.preventDefault();
     popupForm.classList.remove('popup-show');
+    popupForm.classList.remove("modal-error");
+  });
+};
+
+if (linkForm !== null) {
+  form.addEventListener('submit', function (evt) {
+    if (!login.value || !mail.value) {
+      evt.preventDefault();
+      popupForm.classList.remove("modal-error");
+      popupForm.offsetWidth = popupForm.offsetWidth;
+      popupForm.classList.add("modal-error");
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("login", login.value);
+      }
+    }
   });
 };
 
@@ -56,6 +95,7 @@ if (popupForm !== null) {
       if (popupForm.classList.contains('popup-show')) {
         evt.preventDefault();
         popupForm.classList.remove('popup-show');
+        popupForm.classList.remove("modal-error");
       };
     };
   });
@@ -102,6 +142,7 @@ if (popupSubmit !== null) {
     };
   });
 };
+
 $('.range__strip').slider({
   min: 0,
   max: 35000,
